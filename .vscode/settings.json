@@ -2,6 +2,7 @@
 {
     "files.exclude": {
         "**/node_modules": true,
+        "**/node-sass_backup": true,
         "**/.git": true,
         "**/.DS_Store": true,
         "**/*.js": { "when": "$(basename).ts" },

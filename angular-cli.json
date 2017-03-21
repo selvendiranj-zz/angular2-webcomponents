@@ -1,7 +1,7 @@
 {
     "project": {
         "version": "1.0.0-beta.16",
-        "name": "angular_2_ui_web_components"
+        "name": "angular2_webcomponents"
     },
     "apps": [{
         "root": "src",
