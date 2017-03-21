@@ -4,17 +4,20 @@ import { Component } from '@angular/core';
 let template = require('./collapse-demo.component.html');
 
 @Component({
-  selector: 'collapse-demo',
-  template: template
+    selector: 'collapse-demo',
+    template: template
 })
-export class CollapseDemoComponent {
-  public isCollapsed:boolean = false;
+export class CollapseDemoComponent
+{
+    public isCollapsed: boolean = false;
 
-  public collapsed(event:any):void {
-    console.log(event);
-  }
+    public collapsed(event: any): void
+    {
+        console.log(event);
+    }
 
-  public expanded(event:any):void {
-    console.log(event);
-  }
+    public expanded(event: any): void
+    {
+        console.log(event);
+    }
 }
