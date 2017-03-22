@@ -1,0 +1,13 @@
+<header>
+    <!--<nav>
+        <ng-container *ngFor="let item of menuItems">
+            <a [routerLink]="item.uri" routerLinkActive="active">{{item.name}}</a>
+        </ng-container>
+    </nav>-->
+    <ul class="nav nav-pills">
+        <li role="presentation" *ngFor="let item of menuItems">
+            <a [routerLink]="item.uri" routerLinkActive="active">{{item.name}}</a>
+        </li>
+    </ul>
+    <div style="height:5px;width:100%;background-color:#000000;margin-bottom:20px"></div>
+</header>

@@ -5,7 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-// Demo  Component Bootstrap- Start
+// Routing Modules - Start
+import { AppRoutingModule } from './app-routing.module';
+// Routing Modules - End
+
+// Demo Component Bootstrap- Start
 import { AccordionDemoComponent } from './com-impl/accordion/accordion-demo.component';
 import { AlertDemoComponent } from './com-impl/alert/alert-demo.component';
 import { ButtonDemoComponent } from './com-impl/buttons/button-demo.component';
@@ -21,11 +25,7 @@ import { TypeaheadDemoComponent } from './com-impl/typeahead/typeahead-demo.comp
 import { PaginationDemoComponent } from './com-impl/pagination/pagination-demo.component';
 import { DatepickerDemoComponent } from './com-impl/datepicker/datepicker-demo.component';
 import { TimepickerDemoComponent } from './com-impl/timepicker/timepicker-demo.component';
-// Demo  Component Bootstrap- End
-
-// Routing Modules - Start
-import { AppRoutingModule } from './app-routing.module';
-// Routing Modules - End
+// Demo Component Bootstrap- End
 
 // Bootstrap Modules - Start
 import { AlertModule } from './com/alert/alert.module';
@@ -56,6 +56,11 @@ import { GridDemoComponent } from './com-impl/grid/grid-demo.component'; // grid
 import { GoogleMapsDemoComponent } from './com-impl/googlemaps/googlemaps-demo.component'; // google maps demo
 import { FileUploadDemoComponent } from './com-impl/fileupload/fileupload-demo.component'; // google maps demo
 // Demo Other Modules  Components - End
+
+// Core and Heroes Modules - Start
+import { CoreModule }    from './core/core.module';
+import { HeroesModule } from './heroes/heroes.module';
+// Core and Heroes Modules - End
 
 @NgModule({
   declarations: [
@@ -101,13 +106,19 @@ import { FileUploadDemoComponent } from './com-impl/fileupload/fileupload-demo.c
     TimepickerModule,
     PaginationModule,
     NgGridModule, // grid
+    CoreModule,
+    HeroesModule,
     AgmCoreModule.forRoot({
       apiKey: 'Your - > Google-MAPS-API-KEY - here' // google maps api key
     }), // google maps
     AppRoutingModule // Routing Module
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 
 export class AppModule

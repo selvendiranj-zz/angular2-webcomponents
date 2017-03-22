@@ -1,0 +1,8 @@
+<div></div>
+<div>This is heroes component</div>
+<toh-filter-text (changed)="filterChanged($event)"></toh-filter-text>
+<ul>
+    <li *ngFor="let hero of filteredHeroes">
+        {{hero.name}}
+    </li>
+</ul>

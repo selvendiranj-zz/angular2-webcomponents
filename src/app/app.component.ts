@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 
 export class AppComponent
 {
-  title = 'angulartypescript.com - Angular 2 UI Framework - Components';
+  title = 'Angular 2 UI Framework - Components';
 }
