@@ -9,14 +9,17 @@ let template = require('./modal-demo.component.html');
   selector: 'modal-demo',
   template: template
 })
-export class ModalDemoComponent {
-  @ViewChild('childModal') public childModal:ModalDirective;
+export class ModalDemoComponent
+{
+  @ViewChild('childModal') public childModal: ModalDirective;
 
-  public showChildModal():void {
+  public showChildModal(): void
+  {
     this.childModal.show();
   }
 
-  public hideChildModal():void {
+  public hideChildModal(): void
+  {
     this.childModal.hide();
   }
 }

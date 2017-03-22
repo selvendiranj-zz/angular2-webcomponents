@@ -4,21 +4,25 @@ import { Component } from '@angular/core';
   selector: 'file-upload-demo-app',
   templateUrl: './fileupload-demo.component.html'
 })
-export class FileUploadDemoComponent  {
+export class FileUploadDemoComponent
+{
   uploadFile: any;
-  hasBaseDropZoneOver: boolean = false;
+  hasBaseDropZoneOver = false;
   options: Object = {
-    url: 'http://localhost/upload/'//the path to your upload folder
+    url: 'http://localhost/upload/' // the path to your upload folder
   };
 
-  handleUpload(data): void {
-    if (data && data.response) {
+  handleUpload(data): void
+  {
+    if (data && data.response)
+    {
       data = JSON.parse(data.response);
       this.uploadFile = data;
     }
   }
 
-  fileOverBase(e:any):void {
+  fileOverBase(e: any): void
+  {
     this.hasBaseDropZoneOver = e;
   }
 }
