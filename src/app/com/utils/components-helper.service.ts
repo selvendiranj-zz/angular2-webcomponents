@@ -1,6 +1,14 @@
-import {
-  ApplicationRef, ComponentFactoryResolver, ComponentRef, Injectable, Injector, ReflectiveInjector, ViewContainerRef,
-  ResolvedReflectiveProvider, Type
+import
+{
+  ApplicationRef,
+  ComponentFactoryResolver,
+  ComponentRef,
+  Injectable,
+  Injector,
+  ReflectiveInjector,
+  ViewContainerRef,
+  ResolvedReflectiveProvider,
+  Type
 } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
@@ -10,13 +18,16 @@ import { DOCUMENT } from '@angular/platform-browser';
  * - get application root view container ref
  */
 @Injectable()
-export class ComponentsHelper {
-  public constructor(private applicationRef:ApplicationRef,
-                     private componentFactoryResolver:ComponentFactoryResolver,
-                     private injector:Injector) {
+export class ComponentsHelper
+{
+  public constructor(private applicationRef: ApplicationRef,
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private injector: Injector)
+  {
   }
 
-  public getDocument():any {
+  public getDocument(): any
+  {
     return this.injector.get(DOCUMENT);
   }
 
@@ -38,19 +49,23 @@ export class ComponentsHelper {
    * ```
    * @returns {ViewContainerRef} - application root view component ref
    */
-  public getRootViewContainerRef():ViewContainerRef {
+  public getRootViewContainerRef(): ViewContainerRef
+  {
     // https://github.com/angular/angular/issues/9293
     const comps = this.applicationRef.components;
 
-    if(!comps.length) {
+    if (!comps.length)
+    {
       throw new Error(`ApplicationRef instance not found`);
     }
 
-    try {
+    try
+    {
       /* one more ugly hack, read issue above for details */
-      const root = (this.applicationRef as any )._rootComponents[0];
+      const root = (this.applicationRef as any)._rootComponents[0];
       return root._hostElement.vcRef;
-    } catch (e) {
+    } catch (e)
+    {
       throw new Error(`ApplicationRef instance not found`);
     }
   }
@@ -68,13 +83,15 @@ export class ComponentsHelper {
    * @param providers - optional array of providers
    * @returns {ComponentRef<T>} - returns ComponentRef<T>
    */
-  public appendNextToLocation<T>(ComponentClass:Type<T>,
-                                 location:ViewContainerRef,
-                                 providers?:ResolvedReflectiveProvider[]):ComponentRef<T> {
+  public appendNextToLocation<T>(ComponentClass: Type<T>,
+    location: ViewContainerRef,
+    providers?: ResolvedReflectiveProvider[]): ComponentRef<T>
+  {
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentClass);
     let parentInjector = location.parentInjector;
     let childInjector: Injector = parentInjector;
-    if (providers && providers.length > 0) {
+    if (providers && providers.length > 0)
+    {
       childInjector = ReflectiveInjector.fromResolvedProviders(providers, parentInjector);
     }
 
@@ -90,12 +107,13 @@ export class ComponentsHelper {
    * @param options - instance of options
    * @returns {ComponentRef<T>} - returns ComponentRef<T>
    */
-  public appendNextToRoot<T>(ComponentClass:Type<T>,
-                             ComponentOptionsClass:any,
-                             options:any):ComponentRef<T> {
+  public appendNextToRoot<T>(ComponentClass: Type<T>,
+    ComponentOptionsClass: any,
+    options: any): ComponentRef<T>
+  {
     let location = this.getRootViewContainerRef();
     let providers = ReflectiveInjector.resolve([
-      {provide: ComponentOptionsClass, useValue: options}
+      { provide: ComponentOptionsClass, useValue: options }
     ]);
     return this.appendNextToLocation(ComponentClass, location, providers);
   }
