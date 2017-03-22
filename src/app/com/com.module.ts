@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 // Bootstrap Modules - Start
 import { AlertModule } from './alert/alert.module';
@@ -30,6 +31,7 @@ import { AgmCoreModule } from './googlemaps/core'; // google maps
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     AlertModule,
     AccordionModule,
     ButtonsModule,

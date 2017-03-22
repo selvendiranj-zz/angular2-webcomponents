@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { ComModule } from '../com/com.module';
 
@@ -35,6 +36,7 @@ import { UPLOAD_DIRECTIVES } from '../com/fileupload/ng2-uploader';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     ComModule,
   ],
   declarations: [

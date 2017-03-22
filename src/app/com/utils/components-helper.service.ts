@@ -1,7 +1,14 @@
 import
 {
-  ApplicationRef, ComponentFactoryResolver, ComponentRef, Injectable, Injector, ReflectiveInjector, ViewContainerRef,
-  ResolvedReflectiveProvider, Type
+  ApplicationRef,
+  ComponentFactoryResolver,
+  ComponentRef,
+  Injectable,
+  Injector,
+  ReflectiveInjector,
+  ViewContainerRef,
+  ResolvedReflectiveProvider,
+  Type
 } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
