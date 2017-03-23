@@ -1,44 +1,56 @@
 {
-    "project": {
-        "version": "1.0.0",
-        "name": "angular2_webcomponents"
-    },
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "apps": [{
-        "root": "src",
-        "outDir": "dist",
-        "assets": "assets",
+        "assets": [
+            "assets",
+            "favicon.ico"
+        ],
+        "environmentSource": "environments/environment.ts",
+        "environments": {
+            "dev": "environments/environment.ts",
+            "prod": "environments/environment.prod.ts"
+        },
         "index": "index.html",
         "main": "main.ts",
-        "test": "test.ts",
-        "tsconfig": "tsconfig.json",
+        "outDir": "dist",
+        "polyfills": "polyfills.ts",
         "prefix": "app",
-        "mobile": false,
+        "root": "src",
+        "scripts": [],
         "styles": [
             "../node_modules/bootstrap/dist/css/bootstrap.min.css",
             "../node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
             "styles.css"
         ],
-        "scripts": [],
-        "environmentSource": "environments/environment.ts",
-        "environments": {
-            "dev": "environments/environment.ts",
-            "prod": "environments/environment.prod.ts"
-        }
+        "test": "test.ts",
+        "testTsconfig": "tsconfig.spec.json",
+        "tsconfig": "tsconfig.app.json"
     }],
-    "addons": [],
-    "packages": [],
+    "defaults": {
+        "component": {},
+        "styleExt": "css"
+    },
     "e2e": {
         "protractor": {
             "config": "./protractor.conf.js"
         }
     },
+    "lint": [{
+            "project": "src/tsconfig.app.json"
+        },
+        {
+            "project": "src/tsconfig.spec.json"
+        },
+        {
+            "project": "e2e/tsconfig.e2e.json"
+        }
+    ],
+    "project": {
+        "name": "angular2_webcomponents"
+    },
     "test": {
         "karma": {
             "config": "./karma.conf.js"
         }
-    },
-    "defaults": {
-        "styleExt": "css",
-        "prefixInterfaces": false
     }
 }
