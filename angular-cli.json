@@ -24,7 +24,7 @@
         ],
         "test": "test.ts",
         "testTsconfig": "tsconfig.spec.json",
-        "tsconfig": "tsconfig.app.json"
+        "tsconfig": "tsconfig.json"
     }],
     "defaults": {
         "component": {},
@@ -36,7 +36,7 @@
         }
     },
     "lint": [{
-            "project": "src/tsconfig.app.json"
+            "project": "src/tsconfig.json"
         },
         {
             "project": "src/tsconfig.spec.json"
