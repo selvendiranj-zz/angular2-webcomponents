@@ -1,10 +1,8 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": { "name": "angular2_webcomponents" },
     "apps": [{
-        "assets": [
-            "assets",
-            "favicon.ico"
-        ],
+        "assets": ["assets", "favicon.ico"],
         "environmentSource": "environments/environment.ts",
         "environments": {
             "dev": "environments/environment.ts",
@@ -27,34 +25,19 @@
         "testTsconfig": "tsconfig.spec.json"
     }],
     "defaults": {
-        "serve": {
-            "host": "localhost",
-            "port": 4201
-        },
+        "serve": { "host": "localhost", "port": 4201 },
         "component": {},
         "styleExt": "css"
     },
     "e2e": {
-        "protractor": {
-            "config": "./protractor.conf.js"
-        }
+        "protractor": { "config": "./protractor.conf.js" }
     },
-    "lint": [{
-            "project": "src/tsconfig.json"
-        },
-        {
-            "project": "src/tsconfig.spec.json"
-        },
-        {
-            "project": "e2e/tsconfig.e2e.json"
-        }
+    "lint": [
+        { "project": "src/tsconfig.json" },
+        { "project": "src/tsconfig.spec.json" },
+        { "project": "e2e/tsconfig.e2e.json" }
     ],
-    "project": {
-        "name": "angular2_webcomponents"
-    },
     "test": {
-        "karma": {
-            "config": "./karma.conf.js"
-        }
+        "karma": { "config": "./karma.conf.js" }
     }
 }
