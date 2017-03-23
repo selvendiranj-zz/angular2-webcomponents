@@ -27,6 +27,10 @@
         "testTsconfig": "tsconfig.spec.json"
     }],
     "defaults": {
+        "serve": {
+            "host": "localhost",
+            "port": 4201
+        },
         "component": {},
         "styleExt": "css"
     },
