@@ -21,31 +21,31 @@ import { GoogleMapsDemoComponent } from './com-impl/googlemaps/googlemaps-demo.c
 import { FileUploadDemoComponent } from './com-impl/fileupload/fileupload-demo.component';
 
 const routes: Routes = [
-  { path: '', component: AlertDemoComponent },
-  { path: 'alert', component: AlertDemoComponent },
-  { path: 'accordion', component: AccordionDemoComponent },
-  { path: 'button', component: ButtonDemoComponent },
-  { path: 'carousel', component: CarouselDemoComponent },
-  { path: 'collapse', component: CollapseDemoComponent },
-  { path: 'dropdown', component: DropdownDemoComponent },
-  { path: 'modal', component: ModalDemoComponent },
-  { path: 'progressbar', component: ProgressbarDemoComponent },
-  { path: 'rating', component: RatingDemoComponent },
-  { path: 'tabs', component: TabsDemoComponent },
-  { path: 'tooltip', component: TooltipDemoComponent },
-  { path: 'typeahead', component: TypeaheadDemoComponent },
-  { path: 'datepicker', component: DatepickerDemoComponent },
-  { path: 'timepicker', component: TimepickerDemoComponent },
-  { path: 'pagination', component: PaginationDemoComponent },
-  { path: 'grid', component: GridDemoComponent },
-  { path: 'googlemaps', component: GoogleMapsDemoComponent },
-  { path: 'fileupload', component: FileUploadDemoComponent }
+    { path: '', component: AlertDemoComponent },
+    { path: 'alert', component: AlertDemoComponent },
+    { path: 'accordion', component: AccordionDemoComponent },
+    { path: 'button', component: ButtonDemoComponent },
+    { path: 'carousel', component: CarouselDemoComponent },
+    { path: 'collapse', component: CollapseDemoComponent },
+    { path: 'dropdown', component: DropdownDemoComponent },
+    { path: 'modal', component: ModalDemoComponent },
+    { path: 'progressbar', component: ProgressbarDemoComponent },
+    { path: 'rating', component: RatingDemoComponent },
+    { path: 'tabs', component: TabsDemoComponent },
+    { path: 'tooltip', component: TooltipDemoComponent },
+    { path: 'typeahead', component: TypeaheadDemoComponent },
+    { path: 'datepicker', component: DatepickerDemoComponent },
+    { path: 'timepicker', component: TimepickerDemoComponent },
+    { path: 'pagination', component: PaginationDemoComponent },
+    { path: 'grid', component: GridDemoComponent },
+    { path: 'googlemaps', component: GoogleMapsDemoComponent },
+    { path: 'fileupload', component: FileUploadDemoComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
+    providers: []
 })
 
 export class AppRoutingModule
