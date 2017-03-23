@@ -23,8 +23,8 @@
             "styles.css"
         ],
         "test": "test.ts",
-        "testTsconfig": "tsconfig.spec.json",
-        "tsconfig": "tsconfig.json"
+        "tsconfig": "tsconfig.json",
+        "testTsconfig": "tsconfig.spec.json"
     }],
     "defaults": {
         "component": {},
