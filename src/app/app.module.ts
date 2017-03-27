@@ -17,25 +17,25 @@ import { HeroesModule } from './heroes/heroes.module';
 // Core and Heroes Modules - End
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    CoreModule,
-    ComImplModule,
-    HeroesModule,
-    AppRoutingModule
-  ],
-  declarations: [
-    AppComponent
-  ],
-  providers: [
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpModule,
+        CoreModule,
+        ComImplModule,
+        HeroesModule,
+        AppRoutingModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    providers: [
 
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 
 export class AppModule

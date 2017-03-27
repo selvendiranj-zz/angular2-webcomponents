@@ -27,53 +27,53 @@ import { AgmCoreModule } from './googlemaps/core'; // google maps
 // Other Modules - End
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    AlertModule,
-    AccordionModule,
-    ButtonsModule,
-    CarouselModule,
-    CollapseModule,
-    DropdownModule,
-    ModalModule,
-    ProgressbarModule,
-    RatingModule,
-    TabsModule,
-    TooltipModule,
-    TypeaheadModule,
-    DatepickerModule,
-    TimepickerModule,
-    PaginationModule,
-    NgGridModule, // grid
-    AgmCoreModule.forRoot({
-      apiKey: 'Your - > Google-MAPS-API-KEY - here' // google maps api key
-    }) // google maps
-  ],
-  declarations: [
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpModule,
+        AlertModule,
+        AccordionModule,
+        ButtonsModule,
+        CarouselModule,
+        CollapseModule,
+        DropdownModule,
+        ModalModule,
+        ProgressbarModule,
+        RatingModule,
+        TabsModule,
+        TooltipModule,
+        TypeaheadModule,
+        DatepickerModule,
+        TimepickerModule,
+        PaginationModule,
+        NgGridModule, // grid
+        AgmCoreModule.forRoot({
+            apiKey: 'Your - > Google-MAPS-API-KEY - here' // google maps api key
+        }) // google maps
+    ],
+    declarations: [
 
-  ],
-  exports: [
-    AlertModule,
-    AccordionModule,
-    ButtonsModule,
-    CarouselModule,
-    CollapseModule,
-    DropdownModule,
-    ModalModule,
-    ProgressbarModule,
-    RatingModule,
-    TabsModule,
-    TooltipModule,
-    TypeaheadModule,
-    DatepickerModule,
-    TimepickerModule,
-    PaginationModule,
-    NgGridModule,
-    AgmCoreModule
-  ]
+    ],
+    exports: [
+        AlertModule,
+        AccordionModule,
+        ButtonsModule,
+        CarouselModule,
+        CollapseModule,
+        DropdownModule,
+        ModalModule,
+        ProgressbarModule,
+        RatingModule,
+        TabsModule,
+        TooltipModule,
+        TypeaheadModule,
+        DatepickerModule,
+        TimepickerModule,
+        PaginationModule,
+        NgGridModule,
+        AgmCoreModule
+    ]
 })
 
 export class ComModule

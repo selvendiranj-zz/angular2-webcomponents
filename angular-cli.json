@@ -1,42 +1,43 @@
 {
-    "project": {
-        "version": "1.0.0-beta.16",
-        "name": "angular2_webcomponents"
-    },
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": { "name": "angular2_webcomponents" },
     "apps": [{
-        "root": "src",
-        "outDir": "dist",
-        "assets": "assets",
-        "index": "index.html",
-        "main": "main.ts",
-        "test": "test.ts",
-        "tsconfig": "tsconfig.json",
-        "prefix": "app",
-        "mobile": false,
-        "styles": [
-            "styles.css"
-        ],
-        "scripts": [],
+        "assets": ["assets", "favicon.ico"],
         "environmentSource": "environments/environment.ts",
         "environments": {
             "dev": "environments/environment.ts",
             "prod": "environments/environment.prod.ts"
-        }
+        },
+        "index": "index.html",
+        "main": "main.ts",
+        "outDir": "dist",
+        "polyfills": "polyfills.ts",
+        "prefix": "app",
+        "root": "src",
+        "scripts": [],
+        "styles": [
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "../node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
+            "styles.css"
+        ],
+        "test": "test.ts",
+        "tsconfig": "tsconfig.json",
+        "testTsconfig": "tsconfig.spec.json"
     }],
-    "addons": [],
-    "packages": [],
-    "e2e": {
-        "protractor": {
-            "config": "./protractor.conf.js"
-        }
-    },
-    "test": {
-        "karma": {
-            "config": "./karma.conf.js"
-        }
-    },
     "defaults": {
-        "styleExt": "css",
-        "prefixInterfaces": false
+        "serve": { "host": "localhost", "port": 4201 },
+        "component": {},
+        "styleExt": "css"
+    },
+    "e2e": {
+        "protractor": { "config": "./protractor.conf.js" }
+    },
+    "lint": [
+        { "project": "src/tsconfig.json" },
+        { "project": "src/tsconfig.spec.json" },
+        { "project": "e2e/tsconfig.e2e.json" }
+    ],
+    "test": {
+        "karma": { "config": "./karma.conf.js" }
     }
 }

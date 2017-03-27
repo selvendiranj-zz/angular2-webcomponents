@@ -1,39 +1,40 @@
 import
 {
-  Directive, Input, TemplateRef, ViewContainerRef
+    Directive, Input, TemplateRef, ViewContainerRef
 } from '@angular/core';
 
 export interface KeyAttribute
 {
-  [key: string]: any;
+    [key: string]: any;
 }
 
 @Directive({
-  selector: '[ngTransclude]'
+    selector: '[ngTransclude]'
 })
+
 export class NgTranscludeDirective
 {
-  public viewRef: ViewContainerRef;
+    public viewRef: ViewContainerRef;
 
-  private _ngTransclude: TemplateRef<any>;
+    private _ngTransclude: TemplateRef<any>;
 
-  @Input()
-  public set ngTransclude(templateRef: TemplateRef<any>)
-  {
-    this._ngTransclude = templateRef;
-    if (templateRef)
+    @Input()
+    public set ngTransclude(templateRef: TemplateRef<any>)
     {
-      this.viewRef.createEmbeddedView(templateRef);
+        this._ngTransclude = templateRef;
+        if (templateRef)
+        {
+            this.viewRef.createEmbeddedView(templateRef);
+        }
     }
-  }
 
-  public get ngTransclude(): TemplateRef<any>
-  {
-    return this._ngTransclude;
-  }
+    public get ngTransclude(): TemplateRef<any>
+    {
+        return this._ngTransclude;
+    }
 
-  public constructor(private _viewRef: ViewContainerRef)
-  {
-    this.viewRef = _viewRef;
-  }
+    public constructor(private _viewRef: ViewContainerRef)
+    {
+        this.viewRef = _viewRef;
+    }
 }

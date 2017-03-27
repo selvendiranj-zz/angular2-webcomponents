@@ -32,34 +32,34 @@ import { FileUploadDemoComponent } from './fileupload/fileupload-demo.component'
 import { UPLOAD_DIRECTIVES } from '../com/fileupload/ng2-uploader';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    ComModule,
-  ],
-  declarations: [
-    UPLOAD_DIRECTIVES,
-    AccordionDemoComponent,
-    AlertDemoComponent,
-    ButtonDemoComponent,
-    CarouselDemoComponent,
-    CollapseDemoComponent,
-    DropdownDemoComponent,
-    ModalDemoComponent,
-    ProgressbarDemoComponent,
-    RatingDemoComponent,
-    TabsDemoComponent,
-    TooltipDemoComponent,
-    TypeaheadDemoComponent,
-    DatepickerDemoComponent,
-    TimepickerDemoComponent,
-    PaginationDemoComponent,
-    GridDemoComponent,
-    GoogleMapsDemoComponent,
-    FileUploadDemoComponent
-  ]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpModule,
+        ComModule,
+    ],
+    declarations: [
+        UPLOAD_DIRECTIVES,
+        AccordionDemoComponent,
+        AlertDemoComponent,
+        ButtonDemoComponent,
+        CarouselDemoComponent,
+        CollapseDemoComponent,
+        DropdownDemoComponent,
+        ModalDemoComponent,
+        ProgressbarDemoComponent,
+        RatingDemoComponent,
+        TabsDemoComponent,
+        TooltipDemoComponent,
+        TypeaheadDemoComponent,
+        DatepickerDemoComponent,
+        TimepickerDemoComponent,
+        PaginationDemoComponent,
+        GridDemoComponent,
+        GoogleMapsDemoComponent,
+        FileUploadDemoComponent
+    ]
 })
 
 export class ComImplModule
